@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { Card, Button } from 'Components';
 import { getRandomNumber } from 'utils/func';
 import Link from 'next/link';
-import { db } from 'utils/firebase';
+import { db, increment } from 'utils/firebase';
 
 
 export default function Home({ cats }){
@@ -29,12 +29,11 @@ export default function Home({ cats }){
             console.log('No such document!');
         } else {
             db.collection('catmatch').doc(id).update({
-                score: doc.data().score + 1
+                score: increment
             })
             console.log('Document data:', doc.data());
         }
         setstate(getRandomNumber(length))
-
     }
 
     return (
