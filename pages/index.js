@@ -7,6 +7,7 @@ import { Card, Button } from 'Components';
 import { getRandomNumber } from 'utils/func';
 import Link from 'next/link';
 import { db, increment } from 'utils/firebase';
+import * as breakpoint from 'utils/breakpoint';
 
 
 export default function Home({ cats }){

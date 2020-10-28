@@ -1,12 +1,17 @@
 import styled from 'styled-components';
+import * as breakpoint from 'utils/breakpoint';
 
 const Card = ({ src, score, onClick }) => (
 <Card.Wrapper src={src} onClick={onClick}>{score}</Card.Wrapper>
 )
 
 Card.Wrapper = styled.div`
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
+    ${breakpoint.small`
+        width: 200px;
+        height: 200px;
+    `}
     margin: 10px;
     border-radius: 100px;
     background: grey;
