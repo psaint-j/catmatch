@@ -39,6 +39,7 @@ export default function Ranking({ cats }){
 
 Ranking.Wrapper = styled.div`
     margin: 30px auto;
+    justify-content: center;
     display: flex;
     width: 100%;
     ${breakpoint.large`
